@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Easy Weather</title>
+  </head>
+  <body>
+    <div class="nav-bar-div">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo"
+            ><i class="material-icons">wb_sunny</i>Easy Weather</a
+          >
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a href="sass.html"><i class="material-icons">search</i></a>
+            </li>
+            <li>
+              <a href="badges.html"
+                ><i class="material-icons">view_module</i></a
+              >
+            </li>
+            <li>
+              <a href="collapsible.html"
+                ><i class="material-icons">refresh</i></a
+              >
+            </li>
+            <li>
+              <a href="mobile.html"><i class="material-icons">more_vert</i></a>
+            </li>
+            <li>
+              <a href="collapsible.html">
+                <i class="large material-icons">contact_support</i></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container main">
+      <div class="center row">
+        <div class="input-field col s6 offset-s3">
+          <i class="white-text material-icons prefix">search</i>
+          <input
+            type="text"
+            placeholder="Type your city name"
+            id="city-name"
+            class="autocomplete white-text"
+          />
+        </div>
+      </div>
+      <div class="row flexContainer">
+        <div class="col s6 offset-s2 primary-content teal primaryContent center">
+            <h3 id="location"></h3>
+            <h3 id="weather-desc"></h3>
+            <canvas id="w-icon" width="100" height="80"></canvas>
+            <h3 id="temperature"></h3>
+        </div>
+        <div class="col s3 offset-s1 secondary-content teal">
+          <ul class="collection">
+            <li class="collection-item" id="humidity"></li>
+            <li class="collection-item" id="feels-like-temp"></li>
+            <li class="collection-item" id="dew-point"></li>
+            <li class="collection-item" id="wind-speed"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer class="page-footer footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">
+              <a href="#!" class="white brand-logo"
+                ><i class="material-icons">wb_sunny</i>Easy Weather</a
+              >
+            </h5>
+            <p class="grey-text text-lighten-4">
+              Get weather infromation of your city easily.
+            </p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">MORE</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Aout Us</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">About Developers</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">How To Use</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Report</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2020
+          <a class="grey-text text-lighten-4 right" href="#!"
+            >Data Powered by accuWeather</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="skycons.js"></script>
+    <script src="ui.js"></script>
+    <script src="accuWeather.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
