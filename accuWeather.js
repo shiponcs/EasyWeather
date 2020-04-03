@@ -11,7 +11,7 @@ class AccuWeather {
     getCityInfo(city) {
         let cityInformation = new Object();
         return new Promise((resolve, reject) => {
-            fetch(`http://dataservice.accuweather.com/locations/v1/cities/search?apikey=${this.apiKey}&q=${city}&language=en-us&details=true`)
+            fetch(`https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${this.apiKey}&q=${city}&language=en-us&details=true`)
                 .then(resp => resp.json())
                 .then(resp => {
                     console.log(resp);
@@ -26,7 +26,7 @@ class AccuWeather {
         })
     }
     getCurrentWeather() {
-        const currentCondition = `http://dataservice.accuweather.com/currentconditions/v1/${this.locationId}?apikey=${this.apiKey}&language=en-us&details=true`
+        const currentCondition = `https://dataservice.accuweather.com/currentconditions/v1/${this.locationId}?apikey=${this.apiKey}&language=en-us&details=true`
 
         return new Promise((resolve, reject) => {
             fetch(currentCondition)
