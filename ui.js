@@ -1,6 +1,8 @@
 class UI {
     constructor() {
         // UI variables
+        this.secondaryContent = document.querySelector(".secondary-content");
+        this.primaryContent = document.querySelector(".primary-content");
         this.location = document.getElementById("location");
         this.weatherDesc = document.getElementById("weather-desc");
         this.weatherIcon = document.getElementById("weather-icon");
@@ -37,6 +39,19 @@ class UI {
         skycons.add(document.getElementById("w-icon"), Skycons[icon1]);
 
         skycons.play();
+    }
+
+    responseToMobileViewPort() {
+        this.primaryContent.classList.replace("s6", "s8");
+        this.secondaryContent.classList.replace("s3", "s6");
+        this.secondaryContent.classList.replace("offset-s1", "offset-s3");
+
+    }
+    undoResponseToMobileViewPort() {
+        this.primaryContent.classList.replace("s8", "s6");
+        this.secondaryContent.classList.replace("s6", "s3");
+        this.secondaryContent.classList.replace("offset-s3", "offset-s1");
+
     }
 }
 

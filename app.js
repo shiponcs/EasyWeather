@@ -3,6 +3,14 @@ const accuWeather = new AccuWeather();
 // get instance of UI
 const ui = new UI();
 
+window.onload = responsive;
+
+window.onresize = responsive;
+function responsive() {
+    if(window.innerWidth <= 600) ui.responseToMobileViewPort();
+    else ui.undoResponseToMobileViewPort();
+}
+
 document.getElementById("city-name").addEventListener('keyup', getCityName);
 
 

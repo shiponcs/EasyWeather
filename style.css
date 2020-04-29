@@ -5,6 +5,14 @@ body {
   background-image: url("images/bg1.jpg");
 }
 
+.logo{
+  width: auto;
+}
+
+.navBar{
+  position: absolute;
+}
+
 .flexContainer{
   display: flex;
   align-items: flex-end;
@@ -38,4 +46,8 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+/* mobile view port */
+@media screen and (max-width: 40em) {
+  
 }
